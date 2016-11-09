@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="dto1" class="com.cjon.bank.dto.BankDTO"></bean>
+	<bean id="dto2" class="com.cjon.bank.dto.BankDTO"></bean>
+	
+	<bean id="dao" class="com.cjon.bank.dao.BankDAO" >
+	<constructor-arg ref="template"></constructor-arg>
+	</bean>
+	
+	
+	<bean id="service" class="com.cjon.bank.service.BankService" ></bean>
+	
+	<bean id="template" class="com.cjon.bank.util.DBTemplate" >
+	
+	</bean>
+	
+
+</beans>
